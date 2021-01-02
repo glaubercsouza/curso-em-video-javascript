@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <body>
+    <h1>Teste de Pais</h1>
+    País: <input type="text" name="country" id="country"> 
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">
+
+    </div>
+</body>
+    <script>
+        function calcular() {
+            var texP = document.querySelector('input#country')
+            var res = document.querySelector('div#res')
+            var texF = (texP.value.toLowerCase())
+            if (texP == "brasil") {
+                res.innerHTML += '<p>Você é <strong>Brasileiro!</strong><p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>Estrangeiro!</strong><p>'
+            }
+        }
+    </script>
+  
+</body>
+</html>
