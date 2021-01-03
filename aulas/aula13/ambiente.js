@@ -1,8 +1,9 @@
-c = 1
+/*c = 1
 do {
   console.log(`Passo ${c}`)
   c++
 } while (c <= 6)
+*/
 
 /*
 var cont = 0 
