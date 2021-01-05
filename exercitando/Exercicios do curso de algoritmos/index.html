@@ -106,6 +106,37 @@
 
     </div>
   </section>
+  <!-- IMC -->
+  <header>
+    <h1>Cálculo do IMC</h1>
+  </header>
+  <section>
+    <div>
+      <p>Digite o seu peso (Kg):  <input type="number" name="peso" id="txtpes"></p>
+      <p>Digite a sua altura (m): <input type="number" name="altura" id="txtalt"></p>
+      <p><input type="button" value="Calcular" onclick="calcularimc()"></p>
+    </div>
+    <div id="res8">
+
+    </div>
+  </section>
+  <!-- Criança Esperança -->
+  <header>
+    <h1>Criança Esperança</h1>
+  </header>
+  <section>
+    <div>
+      <p>Escolha o valor para doar: </p>
+      <p><input type="radio" name="doacao" id="opt1"> <label for="opt1"> R$ 10</label></p>
+      <p><input type="radio" name="doacao" id="opt2"><label for="opt2"> R$ 25</label></p>
+      <p><input type="radio" name="doacao" id="opt3"><label for="opt3"> R$ 50</label></p>
+      <p>Para doar outro valor (R$): <input type="number" name="doacao-outro" id="opt4"></p>
+      <p><input type="button" value="Doar" onclick="doar()"></p>
+    </div>
+    <div id="res9">
+
+    </div>
+  </section>
   <footer>
     <p>&copy; CursoEmVídeo</p>
   </footer>

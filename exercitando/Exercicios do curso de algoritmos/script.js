@@ -81,3 +81,43 @@ function calcularmedia() {
       res7.innerHTML += 'Aluno <strong>REPROVADO</strong>!'
   }
 }
+
+//IMC
+function calcularimc() {
+  var peso = document.getElementById('txtpes')
+  var altura = document.getElementById('txtalt')
+  var imc = Number(peso.value) / (Number(altura.value) ** 2)
+  res8.innerHTML = `Seu IMC é de ${imc.toFixed(2)}. `
+  if (imc < 17) {
+    res8.innerHTML += `Muito abaixo do peso`
+  } else if (imc >= 17 && imc < 18.5) {
+    res8.innerHTML += `Abaixo do peso`
+  } else if (imc >= 18.5 && imc < 25) {
+    res8.innerHTML += `Peso ideal`
+  } else if (imc >= 25 && imc < 30) {
+    res8.innerHTML += `Sobrepeso`
+  } else if (imc >= 30 && imc < 35) {
+    res8.innerHTML += `Obesidade`
+  } else if (imc >= 35 && imc < 40) {
+    res8.innerHTML += `Obesidade Severa`
+  } else {
+    res8.innerHTML += `Obesidade Mórbida`
+  }
+}
+
+// Criança Esperança
+function doar() {
+  var opcao = document.getElementsByName('doacao')
+  var valor = Number()
+  if (opcao[0].checked) {
+    valor = '10'
+  } else if (opcao[1].checked) {
+    valor = '25'
+  } else if (opcao[2].checked) {
+    valor = '50'
+  } else {
+    valor = document.getElementById('opt4')
+    valor = Number(valor.value)
+  }
+  res9.innerHTML = `Sua doação foi de R$ ${valor}. Obrigado!` 
+}
