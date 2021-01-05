@@ -4,26 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creuza</title>
+  <title>Exercícios do Curso de Algoritmos</title>
   <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
   <header>
+    <!-- Cálculo da Idade -->
     <h1>Cálculo da Idade</h1>
   </header>
   <section>
     <div>
       <p>Em que ano estamos? [AAAA] <input type="number" name="atual" id="txtanoatual"></p>
-      <p>Em que ano eu nasci? [AAAA] <input type="number" name="nasci" id="txtanonasc"></p>
+      <p>Em que você nasceu? [AAAA] <input type="number" name="nasci" id="txtanonasc"></p>
       <input type="button" value="Verificar Idade" onclick="idade()">
     </div>
     <div id="res1">
 
     </div>
-    
-  </section>
 
+  </section>
+  <!-- Conversor de Moedas -->
   <header>
     <h1>Conversor de Moedas</h1>
   </header>
@@ -31,11 +32,12 @@
     <div>
       <p>Quantos reais eu possuo? [R$] <input type="number" name="reais" id="txtreal"></p>
     </div>
-      <input type="button" value="Verificar" onclick="verificar()">
+    <input type="button" value="Verificar" onclick="verificar()">
     <div id="res2">
 
     </div>
   </section>
+  <!-- Conversor de Temperatura -->
   <header>
     <h1>Conversor de Temperatura</h1>
   </header>
@@ -48,6 +50,7 @@
 
     </div>
   </section>
+  <!-- Cálculo de Imposto -->
   <header>
     <h1>Cálculo de Imposto</h1>
   </header>
@@ -60,6 +63,7 @@
 
     </div>
   </section>
+  <!-- Cálculo de Juros -->
   <header>
     <h1>Cálculo Juros</h1>
   </header>
@@ -71,6 +75,34 @@
       <p><input type="button" value="Calcular" onclick="juros()"></p>
     </div>
     <div id="res5">
+
+    </div>
+  </section>
+  <!-- Par ou Ímpar -->
+  <header>
+    <h1>Par ou Ímpar</h1>
+  </header>
+  <section>
+    <div>
+      <p>Digite um número <input type="number" name="parouimpar" id="txtpoi"></p>
+
+      <p><input type="button" value="Verificar" onclick="parouimpar()"></p>
+    </div>
+    <div id="res6">
+
+    </div>
+  </section>
+  <!-- Médias Escolares -->
+  <header>
+    <h1>Cálculo de Médias Escolares</h1>
+  </header>
+  <section>
+    <div>
+      <p>Digite a primeira nota: <input type="number" name="nota1" id="txtn1"></p>
+      <p>Digite a segunda nota: <input type="number" name="nota2" id="txtn2"></p>
+      <p><input type="button" value="Calcular" onclick="calcularmedia()"></p>
+    </div>
+    <div id="res7">
 
     </div>
   </section>
