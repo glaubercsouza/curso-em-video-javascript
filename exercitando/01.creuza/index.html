@@ -10,15 +10,67 @@
 
 <body>
   <header>
-    <h1>Creuza - 1</h1>
+    <h1>Cálculo da Idade</h1>
   </header>
   <section>
     <div>
-      <p>Em que ano estamos? <input type="number" name="atual" id="txtanoatual"></p>
-      <p>Em que ano eu nasci? <input type="number" name="nasci" id="txtanonasc"></p>
+      <p>Em que ano estamos? [AAAA] <input type="number" name="atual" id="txtanoatual"></p>
+      <p>Em que ano eu nasci? [AAAA] <input type="number" name="nasci" id="txtanonasc"></p>
       <input type="button" value="Verificar Idade" onclick="idade()">
     </div>
-    <div id="res">
+    <div id="res1">
+
+    </div>
+    
+  </section>
+
+  <header>
+    <h1>Conversor de Moedas</h1>
+  </header>
+  <section>
+    <div>
+      <p>Quantos reais eu possuo? [R$]<input type="number" name="reais" id="txtreal"></p>
+    </div>
+      <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res2">
+
+    </div>
+  </section>
+  <header>
+    <h1>Conversor de Temperatura</h1>
+  </header>
+  <section>
+    <div>
+      <p>Qual é a temperatura aqui? [°F] <input type="number" name="fahr" id="txtfah"></p>
+      <input type="button" value="Verificar" onclick="converter()">
+    </div>
+    <div id="res3">
+
+    </div>
+  </section>
+  <header>
+    <h1>Cálculo de Imposto</h1>
+  </header>
+  <section>
+    <div>
+      <p>Qual é o valor do produto? [US$] <input type="number" name="produto" id="txtprod"></p>
+      <input type="button" value="Calcular" onclick="calcular()">
+    </div>
+    <div id="res4">
+
+    </div>
+  </section>
+  <header>
+    <h1>Cálculo Juros</h1>
+  </header>
+  <section>
+    <div>
+      <p>Qual o valor do empréstimo? [R$] <input type="number" name="valor" id="txtval"></p>
+      <p>Qual o valor dos juros? [%] <input type="number" name="juro" id="txtjur"></p>
+      <p>Em quantas parcelas? <input type="number" name="parcelas" id="txtpar"></p>
+      <p><input type="button" value="Calcular" onclick="juros()"></p>
+    </div>
+    <div id="res5">
 
     </div>
   </section>
