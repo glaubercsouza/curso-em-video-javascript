@@ -121,3 +121,32 @@ function doar() {
   }
   res9.innerHTML = `Sua doação foi de R$ ${valor}. Obrigado!` 
 }
+
+// Dependentes
+function dependentes() {
+  var nome = document.getElementById('txtfun')
+  var salario = document.getElementById('txtsal')
+  var depend = document.getElementById('txtdep')
+  var nome = String(nome.value)
+  var salario = Number(salario.value)
+  var depend = Number(depend.value)
+  switch (depend) {
+    case 0:
+      salario = salario + (salario * 5 /100)
+      break
+    case 1:
+    case 2:
+    case 3:
+      salario = salario + (salario * 10 /100)
+      break
+    case 4:
+    case 5:
+    case 6:
+      salario = salario + (salario * 15 /100)
+      break
+    default:
+      salario = salario + (salario * 18 /100)
+      break
+  }
+  res10.innerHTML = `O novo salário de ${nome} será R$ ${salario}`
+}
