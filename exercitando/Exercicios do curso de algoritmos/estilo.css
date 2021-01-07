@@ -26,3 +26,7 @@ footer {
 #txtsal, #txtdep {
   width: 100px;
 }
+
+#txtpc1, #txtpc2 {
+  width: 50px;
+}

@@ -165,3 +165,33 @@ function dependentes() {
   }
   res10.innerHTML = `O novo salário de ${nome} será R$ ${salario}`
 }
+
+// Futebol
+function futebol() {
+  var time1 = document.getElementById('txttm1')
+  var time2 = document.getElementById('txttm2')
+  var placar1 = document.getElementById('txtpc1')
+  var placar2 = document.getElementById('txtpc2')
+  var diferenca = Math.abs(Number(placar1.value) - Number(placar2.value))
+  var placar1 = Number(placar1.value)
+  var placar2 = Number(placar2.value)
+  res11.innerHTML = ``
+  if (placar1 > placar2) {
+    res11.innerHTML = `Vitória do ${String(time1.value)}`
+  } else if (placar2 > placar1) {
+    res11.innerHTML = `Vitória do ${String(time2.value)}`
+  }
+  switch (diferenca) {
+    case 0:
+      res11.innerHTML += '<br>Empate'
+      break
+    case 1:
+    case 2:
+    case 3:
+      res11.innerHTML += `<br>Normal`
+      break
+    default:
+      res11.innerHTML += '<br>Goleada'
+      break
+  }
+}
