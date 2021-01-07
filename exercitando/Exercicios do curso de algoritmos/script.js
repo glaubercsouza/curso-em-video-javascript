@@ -71,15 +71,30 @@ function calcularmedia() {
   } 
   else {
     var med = ((Number(n1.value) + Number(n2.value)) / 2)
+    var apr = ''
     res7.innerHTML = `A média do aluno é ${med.toFixed(2)} <br>`
   }
-  if (med >= 7 ){
+  if (med >= 7 ) {
     res7.innerHTML += 'Aluno <strong>APROVADO</strong>'
+    if ( med >= 9){
+      apr = 'A'
+    } else if (med >= 8 && med < 9) {
+      apr = 'B'
+    } if (med >= 7 && med < 8) {
+      apr = 'C'
+    }
   } else if (med >= 5){
-      res7.innerHTML += `Aluno <strong>EM RECUPERAÇÃO!</strong>`
+      res7.innerHTML += `Aluno <strong>EM RECUPERAÇÃO</strong>`
+      if (med >= 6 && med < 7) {
+        apr = 'D'
+      } else if (med >= 5 && med < 6) {
+        apr = 'E'
+      }
   } else{
-      res7.innerHTML += 'Aluno <strong>REPROVADO</strong>!'
+      res7.innerHTML += 'Aluno <strong>REPROVADO</strong>'
+      apr = 'F'
   }
+  res7.innerHTML += ` com aproveitamento ${apr}`
 }
 
 //IMC
