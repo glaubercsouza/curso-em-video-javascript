@@ -135,8 +135,8 @@
   <section>
     <div>
       <p>Qual é o nome do funcionário? <input type="text" name="funcionario" id="txtfun"></p>
-      <p>Qual é o salário do funcionário? R$: <input type="number" name="salario" id="txtsal" ></p>
-      <p>Qual a quantidade de dependentes? <input type="number" name="salario" id="txtdep" ></p>
+      <p>Qual é o salário do funcionário? R$: <input type="number" name="salario" id="txtsal"></p>
+      <p>Qual a quantidade de dependentes? <input type="number" name="salario" id="txtdep"></p>
       <p><input type="button" value="Verificar" onclick="dependentes()"></p>
     </div>
     <div id="res10">
@@ -151,10 +151,23 @@
       <p>Digite o nome dos times e o placar:</p>
       <p>
         <input type="text" name="time1" id="txttm1"><input type="number" name="placar1" id="txtpc1"> x <input type="number" name="placar2" id="txtpc2"><input type="text" name="time2" id="txttm2">
-        <input type="button" value="Verificar" onclick="futebol()">
       </p>
+      <p><input type="button" value="Verificar" onclick="futebol()" class="btn-fut"></p>
     </div>
     <div id="res11">
+    </div>
+  </section>
+  <header>
+    <!-- Contagem Inteligente -->
+    <h1>Contagem Inteligente</h1>
+  </header>
+  <section>
+    <div>
+      <p>Início da contagem: <input type="number" name="inicio-contagem" id="txtini"></p>
+      <p>Final da contagem: <input type="number" name="final-contagem" id="txtfin"></p>
+      <input type="button" value="Contar" onclick="contagem()">
+    </div>
+    <div id="res12">
     </div>
   </section>
   <footer>

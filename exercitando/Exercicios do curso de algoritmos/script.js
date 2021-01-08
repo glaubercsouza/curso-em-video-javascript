@@ -3,7 +3,7 @@ function idade() {
   var atual = document.getElementById('txtanoatual')
   var nasc = document.getElementById('txtanonasc')
   var idade = Number(atual.value) - Number(nasc.value)
-  if (Number(nasc.value) > Number(atual.value)) {
+  if (Number(nasc.value) > Number(atual.value) || nasc.value.length == '0' || atual.value.length == '0') {
     alert('Verifique os dados e tente novamente')
   } else if (idade >= 18){ 
      res1.innerHTML = `<br>Sua idade ao final de ${Number(atual.value)} será ${idade} anos, você já terá atingido a maioridade e estará apto para dirigir.`
@@ -142,28 +142,34 @@ function dependentes() {
   var nome = document.getElementById('txtfun')
   var salario = document.getElementById('txtsal')
   var depend = document.getElementById('txtdep')
-  var nome = String(nome.value)
-  var salario = Number(salario.value)
-  var depend = Number(depend.value)
-  switch (depend) {
-    case 0:
-      salario = salario + (salario * 5 /100)
-      break
-    case 1:
-    case 2:
-    case 3:
-      salario = salario + (salario * 10 /100)
-      break
-    case 4:
-    case 5:
-    case 6:
-      salario = salario + (salario * 15 /100)
-      break
-    default:
-      salario = salario + (salario * 18 /100)
-      break
-  }
+  if (nome.value.length == '0' || salario.value.length == '0' || depend.value.length == '0'){
+    alert('Verifique os dados e tente novamente')
+  } else {
+    var nome = String(nome.value)
+    var salario = Number(salario.value)
+    var depend = Number(depend.value)
+    switch (depend) {
+      case 0:
+        salario = salario + (salario * 5 /100)
+        break
+      case 1:
+      case 2:
+      case 3:
+        salario = salario + (salario * 10 /100)
+        break
+      case 4:
+      case 5:
+      case 6:
+        salario = salario + (salario * 15 /100)
+        break
+      default:
+        salario = salario + (salario * 18 /100)
+        break
+      }
   res10.innerHTML = `O novo salário de ${nome} será R$ ${salario}`
+  }
+  
+  
 }
 
 // Futebol
@@ -176,6 +182,7 @@ function futebol() {
   var placar1 = Number(placar1.value)
   var placar2 = Number(placar2.value)
   res11.innerHTML = ``
+  
   if (placar1 > placar2) {
     res11.innerHTML = `Vitória do ${String(time1.value)}`
   } else if (placar2 > placar1) {
@@ -193,5 +200,24 @@ function futebol() {
     default:
       res11.innerHTML += '<br>Goleada'
       break
+  }
+}
+
+// Contador
+function contagem() {
+  var inicio = document.getElementById('txtini')
+  var final = document.getElementById('txtfin')
+  var final = Number(final.value)
+  var inicio = Number(inicio.value)
+  var p = 1
+  res12.innerHTML = ''
+  if (final > inicio) {
+    for (var c = inicio; c <= final; c += p){
+      res12.innerHTML += `${c}... `
+    }
+  } else {
+    for (var c = inicio; c >= final; c -= 1) {
+      res12.innerHTML += `${c}...`
+    }
   }
 }

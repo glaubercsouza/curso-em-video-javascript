@@ -23,10 +23,15 @@ footer {
   font-style: italic;
 }
 
-#txtsal, #txtdep {
+#txtsal, #txtdep, #txttm1, #txttm2{
   width: 100px;
+  margin: 5px;
+}
+
+#txttm1 {
+  margin-left: 0px;
 }
 
 #txtpc1, #txtpc2 {
-  width: 50px;
+  width: 35px;
 }
