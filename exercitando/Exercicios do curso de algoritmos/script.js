@@ -123,7 +123,6 @@ function calcularimc() {
 // Criança Esperança
 function doar() {
   var opcao = document.getElementsByName('doacao')
-  var valor = Number()
   if (opcao[0].checked) {
     valor = '10'
   } else if (opcao[1].checked) {
@@ -209,15 +208,14 @@ function contagem() {
   var final = document.getElementById('txtfin')
   var final = Number(final.value)
   var inicio = Number(inicio.value)
-  var p = 1
   res12.innerHTML = ''
   if (final > inicio) {
-    for (var c = inicio; c <= final; c += p){
+    for (var c = inicio; c <= final; c += 1){
       res12.innerHTML += `${c}... `
     }
   } else {
     for (var c = inicio; c >= final; c -= 1) {
-      res12.innerHTML += `${c}...`
+      res12.innerHTML += `${c}... `
     }
   }
 }
@@ -267,5 +265,22 @@ function primo() {
       } else {
         res15.innerHTML = `<br>O número ${numero} é primo`
     }
+  }
+}
+
+// Contador com seletor
+function contarseletor() {
+  var opcao = document.getElementsByName('contagem')
+  res16.innerHTML = ``
+  if (opcao[0].checked) {
+    for (var c = 1; c <= 10; c += 1) {
+      res16.innerHTML += `${c}... `
+    } 
+  } else if (opcao[1].checked) {
+    for (var c = 10; c >= 1; c -= 1) {
+      res16.innerHTML += `${c}... `
+    }
+  } else {
+    alert('Escolha uma opção')
   }
 }
