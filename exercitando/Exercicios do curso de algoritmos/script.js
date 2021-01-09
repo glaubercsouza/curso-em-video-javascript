@@ -284,3 +284,35 @@ function contarseletor() {
     alert('Escolha uma opção')
   }
 }
+
+// Seletor de Pessoas
+function selecpessoas() {
+  var sexo = document.getElementsByName('anpsexo')
+  var idade = document.getElementById('anpida')
+  var cabelo = document.getElementsByName('cabelo')
+  var TotH = 0
+  var TotM = 0
+  var continuar = ''
+  idade = Number(idade.value)
+  
+  do {
+    res17.innerHTML = ''
+    if (sexo[0].checked && idade > 18 && cabelo[1].checked) {
+      TotH++
+    } else if (sexo[1].checked && idade >= 25 && idade < 30 && cabelo[2].checked) {
+      TotM++
+    }
+  
+    var confirm = window.confirm('Gostaria de inserir outra pessoa?')
+    if (confirm == true) {
+      continuar = 'S'
+    } else {
+      continuar = 'N'
+    }
+  } while (continuar == 'S')
+  
+  res17.innerHTML += `O total de homens maiores de 18 anos e cabelos castanhos é ${TotH}`
+  res17.innerHTML += `<br>O total de mulheres com idade entre 25 e 30 anos e cabelos loiros é de ${TotM}`
+  
+  
+}

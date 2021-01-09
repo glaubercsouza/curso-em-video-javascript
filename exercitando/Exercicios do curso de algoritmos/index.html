@@ -214,12 +214,38 @@
     <div>
       <p>Escolha uma opção: </p>
       <p><input type="radio" name="contagem" id="txtsel1">
-      <label for="txtsel1">Contar de 1 a 10</label></p>
+        <label for="txtsel1">Contar de 1 a 10</label>
+      </p>
       <p><input type="radio" name="contagem" id="txtsel2">
-      <label for="txtsel2">Contar de 10 a 1</label></p>
+        <label for="txtsel2">Contar de 10 a 1</label>
+      </p>
       <input type="button" value="Contar" onclick="contarseletor()">
     </div>
     <div id="res16">
+    </div>
+  </section>
+  <!-- Analisador de Pessoas -->
+  <header>
+    <h1>Seletor de Pessoas</h1>
+  </header>
+  <section>
+    <div>
+      <p>Escolha o sexo: <input type="radio" name="anpsexo" id="anpmas"><label for="anpmas">Masculino</label> <input type="radio" name="anpsexo" id="anpfem"><label for="anpfem">Feminino</label></p>
+      <p>Qual é a idade? <input type="number" name="apidade" id="anpida"></p>
+      <p>Selecione a cor do cabelo:
+      <ul class="lista-anp">
+        <li><input type="radio" name="cabelo" id="anppreto"><label for="anppreto"> Preto</label></li>
+        <li><input type="radio" name="cabelo" id="anpcast"><label for="anpcast"> Castanho</label></li>
+        <li><input type="radio" name="cabelo" id="anplour"><label for="anplour"> Loiro</label></li>
+        <li><input type="radio" name="cabelo" id="anpruivo"><label for="anpruivo"> Ruivo</label></li>
+      </ul>
+
+      <input type="button" value="Inserir" onclick="selecpessoas()">
+
+      </p>
+
+    </div>
+    <div id="res17">
     </div>
   </section>
   <footer>

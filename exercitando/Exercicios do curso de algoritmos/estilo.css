@@ -35,3 +35,7 @@ footer {
 #txtpc1, #txtpc2 {
   width: 35px;
 }
+
+.lista-anp {
+  list-style-type: none;
+}
