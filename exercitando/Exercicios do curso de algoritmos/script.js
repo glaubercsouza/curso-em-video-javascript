@@ -231,3 +231,15 @@ function tabuada() {
     res13.innerHTML += `<br>${tabuada} X ${c} = ${c * tabuada}`
   }
 }
+
+// Fatorial
+function fatorial() {
+  var fatorial = document.getElementById('txtfat')
+  fatorial = Number(fatorial.value)
+  res14.innerHTML = ''
+  fat = fatorial
+  for (var c = fatorial - 1; c >= 1; c--) {
+    fatorial = fatorial * c
+  }
+  res14.innerHTML = `<br>${fat}! = ${fatorial}`
+}
