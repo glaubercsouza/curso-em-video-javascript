@@ -235,11 +235,15 @@ function tabuada() {
 // Fatorial
 function fatorial() {
   var fatorial = document.getElementById('txtfat')
-  fatorial = Number(fatorial.value)
+  fat = Number(fatorial.value)
   res14.innerHTML = ''
-  fat = fatorial
-  for (var c = fatorial - 1; c >= 1; c--) {
+  if (fatorial.value.length == '0' || fat == '0') {
+    fatorial = 1
+  } else {
+    fatorial = Number(fatorial.value)
+    for (var c = fatorial - 1; c >= 1; c--) {
     fatorial = fatorial * c
+    }
   }
   res14.innerHTML = `<br>${fat}! = ${fatorial}`
 }
