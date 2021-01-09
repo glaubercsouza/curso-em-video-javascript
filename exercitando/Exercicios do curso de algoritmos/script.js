@@ -221,3 +221,13 @@ function contagem() {
     }
   }
 }
+
+// Tabuada
+function tabuada() {
+  var tabuada = document.getElementById('txttab')
+  tabuada = Number(tabuada.value)
+  res13.innerHTML = ''
+  for (var c = 1; c <= 10; c++){
+    res13.innerHTML += `<br>${tabuada} X ${c} = ${c * tabuada}`
+  }
+}
