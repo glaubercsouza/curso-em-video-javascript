@@ -247,3 +247,25 @@ function fatorial() {
   }
   res14.innerHTML = `<br>${fat}! = ${fatorial}`
 }
+
+// Primo
+function primo() {
+  var numero = document.getElementById('txtpri')
+  res15.innerHTML = ''
+  if (numero.value.length == '0') {
+    alert('Preencha um número')
+  } else {
+    var contdiv = 0
+    numero = Number(numero.value)
+    for (var c = 1; c < numero ; c++ ) {
+      if (numero % c == '0') {
+        contdiv++
+      }
+    }
+      if (contdiv > 2 || numero == 0) {
+        res15.innerHTML = `<br>O número ${numero} não é primo`
+      } else {
+        res15.innerHTML = `<br>O número ${numero} é primo`
+    }
+  }
+}
