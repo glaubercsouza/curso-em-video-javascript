@@ -287,12 +287,12 @@ function contarseletor() {
 
 // Seletor de Pessoas
 function selecpessoas() {
+  
   var sexo = document.getElementsByName('anpsexo')
   var idade = document.getElementById('anpida')
   var cabelo = document.getElementsByName('cabelo')
   var TotH = 0
   var TotM = 0
-  var continuar = ''
   idade = Number(idade.value)
   
   do {
@@ -303,6 +303,7 @@ function selecpessoas() {
       TotM++
     }
   
+    var continuar = ''
     var confirm = window.confirm('Gostaria de inserir outra pessoa?')
     if (confirm == true) {
       continuar = 'S'
@@ -313,6 +314,5 @@ function selecpessoas() {
   
   res17.innerHTML += `O total de homens maiores de 18 anos e cabelos castanhos é ${TotH}`
   res17.innerHTML += `<br>O total de mulheres com idade entre 25 e 30 anos e cabelos loiros é de ${TotM}`
-  
-  
 }
+
