@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reajustar salário</title>
+  <style>
+    body {
+      font: 12pt Arial;
+    }
+
+    button {
+      font: 12pt Arial;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reajuste salarial</h1>
+  <button onclick="verificar()">Reajustar Salário</button>
+  <section><p>Clique no botão acima para iniciar.</p></section>
+  <script>
+    function verificar() {
+      let nome = window.prompt('Qual é o nome do funcionário?')
+      let salario = Number(window.prompt(`Qual é o salário de ${nome}?`))
+      let reajuste = Number(window.prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`))
+      let novo = salario * reajuste / 100 
+      let res = document.getElementsByTagName('p')[0]
+      res.innerHTML = `<p><h2>${nome} recebeu um aumento salarial!</h2></p>`
+      res.innerHTML += `<p>O salário atual era ${Number(salario).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.</p>`
+      res.innerHTML += `<p>Com um aumento de ${reajuste}%, o salário vai aumentar ${Number(novo).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} no próximo mês.</p>`
+      res.innerHTML += `<p>E a partir daí, ${nome} vai passar a ganhar ${Number(salario + novo).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.</p>`
+    }
+  </script>
+</body>
+</html>
