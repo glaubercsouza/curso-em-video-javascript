@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórmula de Bhaskara</title>
+  <style>
+    body {
+      font: 12pt Arial;
+    }
+
+    button {
+      font: 12pt Arial;
+      padding: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Resolvendo Bhaskara</h1>
+  <button onclick="calcular()">Calcular</button>
+  <section>
+    <p>Considerando uma equação no formato <em><strong>a</strong>x<sup>2</sup> + <strong>b</strong>x + <strong>c</strong> = 0</em>, aperte o botão acima para calcular o valor de &#9651</p>
+  </section>
+  <script>
+    function calcular() {
+      let a = Number(window.prompt('Qual é o valor de a?'))
+      let b = Number(window.prompt('Qual é o valor de b?'))
+      let c = Number(window.prompt('Qual é o valor de c?'))
+      let res = document.getElementsByTagName('p')[0]
+      res.innerHTML = `<p><h2>Resolvendo Bhaskara</h2></p>`
+      res.innerHTML += `<p>A equação atual é <strong>${a}x<sup>2</sup> + ${b}x + ${c} = 0</strong></p>`
+      res.innerHTML += `<p>O cálculo realizado será <strong>&#9651 = ${b}<sup>2</sup> - 4 . ${a} . ${c}</strong></p>`
+      res.innerHTML += `<p>O valor calculado foi <strong><mark>&#9651 = ${(b ** 2) - (4 * a * c)}</mark></strong></p>`
+    }
+  </script>
+</body>
+
+</html>
